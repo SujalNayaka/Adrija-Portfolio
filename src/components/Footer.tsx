@@ -93,7 +93,7 @@ const Footer = () => {
                 <Youtube className="w-6 h-6" />
               </motion.a>
               <motion.a
-                href="linkedin.com/in/adrija-singh-34737a2a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/adrijasingh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -153,7 +153,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
             <div className="space-y-2 text-gray-400">
               <p>Bangalore, Karnataka</p>
-              <p>adrija.singh@example.com</p>
+              <p>adrijasinghh@gmail.com</p>
               <p>+91 98765 43210</p>
             </div>
           </motion.div>
