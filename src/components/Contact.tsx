@@ -40,18 +40,6 @@ const Contact = () => {
       href: "https://www.facebook.com/share/16xPCQdriy/?mibextid=wwXIfr"
     },
     {
-      icon: PinterestIcon,
-      title: "Pinterest",
-      value: "@adrijasingh",
-      href: "https://pin.it/6SpsvTH48"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210"
-    },
-    {
       icon: MapPin,
       title: "Location",
       value: "Bangalore, Karnataka",
@@ -87,7 +75,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "linkedin.com/in/adrija-singh-34737a2a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      href: "https://www.linkedin.com/in/adrijasingh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       color: "text-blue-500 hover:text-blue-600"
     }
   ];
