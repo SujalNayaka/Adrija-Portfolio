@@ -41,7 +41,7 @@ const Hero = () => {
                 transition={{ delay: 0.4 }}
                 className="text-lg text-gray-600 leading-relaxed max-w-lg"
               >
-                Hi, I'm Adrija Singh - YouTuber with 1.3K+ subscribers, Automation Engineer at Schneider, 
+                Hi, I'm Adrija Singh - YouTuber with 1.3K+ subscribers, R&D Engineer at Schneider, 
                 and your guide for personal growth, career guidance, and college counselling.
               </motion.p>
             </div>
@@ -110,7 +110,7 @@ const Hero = () => {
                   className="w-80 h-80 bg-gradient-to-br from-rose-100 to-white rounded-full flex items-center justify-center"
                 >
                   <img
-                    src="main.jpeg"
+                    src="2.jpeg"
                     alt="Adrija Singh"
                     className="w-64 h-64 object-cover rounded-full shadow-xl"
                   />
