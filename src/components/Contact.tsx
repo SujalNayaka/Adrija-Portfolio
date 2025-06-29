@@ -30,7 +30,7 @@ const Contact = () => {
     {
       icon: Instagram,
       title: "Instagram",
-      value: "@adrijasingh",
+      value: "@theadrijasingh",
       href: "https://www.instagram.com/theadrijasingh?igsh=MTV0dmtxeXI4eDU0Zg%3D%3D&utm_source=qr"
     },
     {
