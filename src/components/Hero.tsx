@@ -2,6 +2,17 @@ import { motion } from 'framer-motion';
 import { Briefcase, Instagram, Play, Youtube } from 'lucide-react';
 
 const Hero = () => {
+  const handleLearnMore = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWatchVideos = () => {
+    window.open('https://youtube.com/@adrijasinghh?feature=shared', '_blank');
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32">
       <div className="container-custom">
@@ -20,7 +31,7 @@ const Hero = () => {
                 className="text-5xl lg:text-6xl font-serif font-bold text-gray-800 leading-tight"
               >
                 Your Growth is
-                <span className="text-gradient block">What Makes You</span>
+                <span className="text-gradient block">What Makes Your</span>
                 Character
               </motion.h1>
               
@@ -41,10 +52,16 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4"
             >
-              <button className="btn-primary flex items-center space-x-2">
+              <button 
+                onClick={handleLearnMore}
+                className="btn-primary flex items-center space-x-2"
+              >
                 <span>Learn More</span>
               </button>
-              <button className="btn-secondary flex items-center space-x-2">
+              <button 
+                onClick={handleWatchVideos}
+                className="btn-secondary flex items-center space-x-2"
+              >
                 <Play className="w-5 h-5" />
                 <span>Watch Videos</span>
               </button>
@@ -66,7 +83,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-2 text-gray-600">
                 <Briefcase className="w-5 h-5 text-blue-500" />
-                <span className="font-medium">Schneider Engineer</span>
+                <span className="font-medium">R&D Engineer in Schneider</span>
               </div>
             </motion.div>
           </motion.div>
@@ -93,7 +110,7 @@ const Hero = () => {
                   className="w-80 h-80 bg-gradient-to-br from-rose-100 to-white rounded-full flex items-center justify-center"
                 >
                   <img
-                    src="2.jpeg"
+                    src="main.jpeg"
                     alt="Adrija Singh"
                     className="w-64 h-64 object-cover rounded-full shadow-xl"
                   />

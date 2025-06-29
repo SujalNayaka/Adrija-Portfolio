@@ -7,7 +7,7 @@ const About = () => {
 
   const images = [
     {
-      src: "logo.jpeg",
+      src: "2.jpeg",
       alt: "Adrija Singh - Professional"
     },
     {
@@ -19,7 +19,7 @@ const About = () => {
       alt: "Adrija Singh - Engineer"
     },
     {
-      src: "2.jpeg",
+      src: "6.jpeg",
       alt: "Adrija Singh - Counselor"
     },
     {
@@ -41,7 +41,7 @@ const About = () => {
     {
       icon: BookOpen,
       title: "Professional Growth",
-      description: "Automation Engineer at Schneider, CAT Aspirant"
+      description: "R&D Engineer at Schneider, CAT Aspirant"
     },
     {
       icon: Heart,

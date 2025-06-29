@@ -39,10 +39,10 @@ const Travel = () => {
       location: "Rajasthan, India"
     },
     {
-      title: "Bangalore 📍",
-      description: "Things to Do In and Around Bangalore🙌🏻",
-      thumbnail: "bangalore.png",
-      youtubeUrl: "https://youtube.com/playlist?list=PLI4P-XZU6btp-iGuHjxzei3hcJF5vakkG&feature=shared",
+      title: "Travel 🛣️🔍",
+      description: "This is an exclusive playlist to provide itineraries, guides for your next tourist destination,resorts, activities,reviews etc based on first hand experience by me! 💗",
+      thumbnail: "travel.png",
+      youtubeUrl: "https://youtube.com/playlist?list=PLI4P-XZU6btrZuwkbqNwl_ah4WHKjWqdQ&feature=shared",
       location: "Northeast India"
     }
   ];
@@ -111,7 +111,7 @@ const Travel = () => {
                     className="inline-flex items-center space-x-2 bg-rose-500 hover:bg-rose-600 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    <span>Watch Vlog</span>
+                    <span>Watch Now</span>
                   </motion.a>
                 </div>
               </div>
