@@ -1,9 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Award, BookOpen, ChevronLeft, ChevronRight, Heart, TrendingUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react'; // Import useRef
 
 const About = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const intervalRef = useRef<number | null>(null); // Use useRef to hold the interval ID
 
   const images = [
     {
@@ -55,31 +56,51 @@ const About = () => {
     }
   ];
 
-  // Auto-slide functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+  // Function to start or restart the auto-slide interval
+  const startAutoSlide = () => {
+    // Clear any existing interval to prevent multiple intervals running
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000); // Change image every 4 seconds
+  };
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+  // Effect to manage auto-sliding
+  useEffect(() => {
+    startAutoSlide(); // Start the auto-slide when component mounts or currentImageIndex changes
+
+    // Cleanup: Clear the interval when the component unmounts
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [currentImageIndex, images.length]); // Dependency array: re-run effect when currentImageIndex or images.length changes
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
+    // No need to explicitly call startAutoSlide() here, as currentImageIndex change
+    // will trigger the useEffect to reset the interval.
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
+    // No need to explicitly call startAutoSlide() here, as currentImageIndex change
+    // will trigger the useEffect to reset the interval.
   };
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
+    // No need to explicitly call startAutoSlide() here, as currentImageIndex change
+    // will trigger the useEffect to reset the interval.
   };
 
   return (
@@ -145,7 +166,7 @@ const About = () => {
                   </div>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -173,7 +194,7 @@ const About = () => {
               >
                 Welcome To <span className="text-gradient">Adrija's</span> World
               </motion.h2>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -181,8 +202,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-lg text-gray-600 leading-relaxed"
               >
-                I'm passionate about empowering individuals through personal growth, career guidance, 
-                and educational counselling. With my experience as a top performer and content creator, 
+                I'm passionate about empowering individuals through personal growth, career guidance,
+                and educational counselling. With my experience as a top performer and content creator,
                 I help others unlock their potential and achieve their dreams.
               </motion.p>
             </div>
