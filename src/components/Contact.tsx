@@ -61,12 +61,6 @@ const Contact = () => {
       color: "text-blue-600 hover:text-blue-700"
     },
     {
-      icon: PinterestIcon,
-      name: "Pinterest",
-      href: "https://pin.it/6SpsvTH48",
-      color: "text-red-600 hover:text-red-700"
-    },
-    {
       icon: Youtube,
       name: "YouTube",
       href: "https://youtube.com/@adrijasinghh?feature=shared",
